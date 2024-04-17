@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng kí tài khoản</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="../js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    $(document).ready(function() {
+       var i = 2;
+
+       // ho ten
+       function kiemTraHT() {
+           var kt = /(^[A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]+))*$/;
+           if ($("#txtTen").val() == "") {
+               $("#tbTen").html("*Bắt buộc nhập !!");
+               $("#tbTen").addClass("chu_mauDo");
+               return false;
+           }
+           if (!kt.test($("#txtTen").val())) {
+               $("#tbTen").html("*Chữ cái đầu của mỗi từ phải viết hoa và không dấu!");
+               $("#tbTen").addClass("chu_mauDo");
+               return false;
+           }
+           $("#tbTen").html("*Hợp lệ");
+           $("#tbTen").addClass("chu_mauXanh");
+           return true;
+
+       };
+       $("#txtTen").blur(kiemTraHT);
+
+       // kiem tra sdt
+       function kiemTraSDT() {
+           var kt = /^[0-9]{4}-[0-9]{3}-[0-9]{3}$/;
+           if ($("#txtSDT").val() == "") {
+               $("#tbSDT").html("*Bắt buộc nhập!");
+               $("#tbSDT").addClass("chu_mauDo");
+               return false;
+           }
+           if (!kt.test($("#txtSDT").val())) {
+               $("#tbSDT").html("*Chuỗi có dạng 0000-000-000");
+               $("#tbSDT").addClass("chu_mauDo");
+               return false;
+           }
+           $("#tbSDT").html("*Hợp lệ");
+           $("#tbSDT").addClass("chu_mauXanh");
+           return true;
+       };
+       $("#txtSDT").blur(kiemTraSDT);
+
+       //mat khau
+       function kiemTraMK() {
+        var kt = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+        //var kt = /^[0-9]{4}-[0-9]{3}-[0-9]{3}$/;
+        if ($("#txtMK").val() == "") {
+            $("#tbMK").html("*Bắt buộc nhập!");
+            $("#tbMK").addClass("chu_mauDo");
+            return false;
+        }
+        if (!kt.test($("#txtMK").val())) {
+            $("#tbMK").html("*Mật khẩu tối thiểu 6 ký tự, có ít nhất 1 chữ và 1 số.(VD: 12345a)");
+            $("#tbMK").addClass("chu_mauDo");
+            return false;
+        }
+        $("#tbMK").html("*Hợp lệ");
+        $("#tbMK").addClass("chu_mauXanh");
+        return true;
+    };
+    $("#txtMK").blur(kiemTraMK);
+       //dia chi
+       //dia chi
+       function kiemTraDC() {
+        var mauKT1 = /^[a-zA-Z0-9\s,'.-]+$/;
+        //so khớp user name
+        if ($("#txtDC").val() == "") {
+            $("#tbDC").html("Bắt buộc nhập");
+            $("#tbDC").addClass("chu_mauDo");
+            return false;
+        }
+        if (!mauKT1.test($("#txtDC").val())) {
+            $("#tbDC").html("*Địa chỉ viết không dấu!");
+
+            $("#tbDC").addClass("chu_mauDo");
+            return false;
+        }
+        $("#tbDC").html("*Hợp lệ");
+        $("#tbDC").addClass("chu_mauXanh");
+        return true;
+    }
+    $("#txtDC").blur(kiemTraDC);
+       // nut luu
+       $("#btnSave").click(function() {
+        var ten = $("#txtTen").val();
+        var gt  = $("#txtGioiTinh").val();
+        var sdt = $("#txtSDT").val();
+        var ngsinh = $("#txtNgSinh").val();
+        var dc = $("#txtDC").val();
+        var khoahoc = $("#slKH").val();
+        var hocphi = $("#txtHP").val();
+
+        var them = "<tr><td>" + (i++) + "</td><td>" + ten + "</td><td>" + gt + "</td><td>" + sdt + "</td><td>" +
+            ngsinh + "</td><td>" + dc + "</td><td>" + khoahoc + "</td><td>" + hocphi + "</td></tr>";
+        $("table").append(them);
+        $("#myModal").modal("hide");
+        alert("Đăng kí thành công. Vui lòng đăng nhập lại.");
+        window.location.href ='dangnhap.html';
+         return true;
+    });
+
+
+   });
+</script>
+</head>
+
+<body>
+  <div class="wrapper" style="background-color: rgb(255, 255, 255);">
+    <header style="background-color: #282120">
+      <div class="nav-head" style="justify-content: center;height: 150px">
+        <div class="img">
+          <a href="../html/home.html"><img src="../img/logo.png" alt="" style="height: 150px;margin-left: 100px;"></a>
+
+        </div>
+        <div class="item" style="margin-left: 100px;margin-top: 60px;">
+          <div class="search">
+            <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Bạn cần tìm..." aria-label="Search"
+                    style="width: 350px;height: 45px;">
+                    <button class="btn btn-success" type="submit" style="background-color: #9e7d57;">Tìm</button>
+                  </form>
+              </div>
+            </nav>
+          </div>
+          <div class="contact">
+            <button type="button" class="btn btn-secondary" style="border-radius:20px;font-size:90%;margin-right: 20px;background-color: #9e7d57;"><a href="../html/dangnhap.html" style="color: #fff;">Liên hệ<br>0345280659</a></button>
+          </div>
+          <div class="dangnhap">
+            <button type="button" class="btn btn-secondary" style="border-radius:20px;font-size: 90%;margin-right: 20px; background-color: #9e7d57;"><a href="../html/dangnhap.html" style="color: #fff;">Đăng ký<br>Đăng nhập</a></button>
+          </div>
+          <div class="cart">
+            <button type="button" class="btn btn-secondary" style="border-radius:20px;height: 57px;font-size: 90%;margin-right: 20px;background-color: #9e7d57;"><a href="../html/cart.html" style="color: #fff;">Giỏ hàng</a></button>
+          </div>
+          <div class="cart">
+            <button type="button" class="btn btn-secondary" style="border-radius:20px;height: 57px;font-size: 90%;margin-right: 20px;background-color: #9e7d57;"><a href="../html/dangnhap.html" style="color: #fff;">Tra cứu<br>đon hàng</a></button>
+            </div>
+        </div>
+      </div>
+    </header>
+    <div class="topnav" style="position: relative;margin-top: -5px;background-color: #9e7d57;">
+      <div class="menu" style="margin-top: 10px;font-size: 15px;">
+        <ul class="nav" style="margin-left: 40px; margin-top: -20px; justify-content: center;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../html/home.html">TRANG CHỦ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/kindofwatch.html" class="text-white" data-bs-toggle="dropdown"
+              aria-expanded="false">LOẠI ĐỒNG HỒ</a>
+            <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+              <li><a class="dropdown-item" href="../html/kindofwatch.html" style="font-weight: bold;">LOẠI ĐỒNG HỒ</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Đồng hồ thông minh</a></li>
+              <li><a class="dropdown-item" href="#">Vòng đeo tay thông minh</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ định vị trẻ em</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Theo nhu cầu</a></li>
+              <li><a class="dropdown-item" href="#">Theo thương hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Theo tiêu chí</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/brand.html" class="text-white" data-bs-toggle="dropdown"
+              aria-expanded="false">THƯƠNG HIỆU</a>
+            <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+              <li><a class="dropdown-item" href="../html/brand.html" style="font-weight: bold;">THƯƠNG HIỆU</a></li>
+              <div class="row">
+                <div class="col-12">
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/amazfit.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/Apple_watch.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/brand-icon-soundpeats_2.webp" alt=""></a>
+                  </li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/coros.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/garmin.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/Huawei.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/Kieslect.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/Samsung.webp" alt=""></a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../img/brand/Xiaomi.webp" alt=""></a></li>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/accessories.html" class="text-white" data-bs-toggle="dropdown"
+              aria-expanded="false">PHỤ KIỆN</a>
+            <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+              <li><a class="dropdown-item" href="../html/accessories.html" style="font-weight: bold;">Dây đồng hồ</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/shop.html">CỬA HÀNG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/aboutUs.html">VỀ CHÚNG TÔI</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="container"> -->
+        <div class="modal-content" style="width: 60%;margin-left: 20%;margin-top: 20px;border-radius: 15px;">
+            <div class="modal-header"style="justify-content: center;">
+                <h3 class="text-danger">THÔNG TIN ĐĂNG KÝ</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form-control">
+                    <!-- ten -->
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <label for="">Họ và tên: <span style="color: red;font-weight: bold;">*</span> </label>
+                            <br>
+                            <span style="font-size: 70%;">Viết họ và tên, viết hoa chữ cái đầu, không dấu</span>
+                        </div>
+                        <div class="col-6 col-sm-9">
+                            <input type="text" class="form-control" id="txtTen">
+                            <span id="tbTen" ></span>
+                        </div>
+                    </div> <br>
+
+                    <!-- gioitinh -->
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <label for="">Giới tính: </label>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <select name="KH" class="form-control" id="slKH">
+                                <option value="5000000">Nam</option>
+                                <option value="8000000">Nữ</option>
+                                <option value="9000000">Khác</option>
+                            </select>
+                        </div>
+                      
+                    </div><br>
+
+                    <!-- so dien thoai -->
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <label for="">Số điện thoại: <span style="color: red;font-weight: bold;">*</span> </label>
+                            <br>
+                            <span style="font-size: 70%;">Số điện thoại phải theo định dạng XXXX-XXX-XXX</span>
+                        </div>
+                        <div class="col-6 col-sm-9">
+                            <input type="text" id="txtSDT" class="form-control" >
+                            <span id="tbSDT"></span>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                      <div class="col-6 col-sm-3">
+                          <label for="">Mật khẩu: <span style="color: red;font-weight: bold;">*</span> </label>
+                          <br>
+                          <span style="font-size: 70%;">Mật khẩu tối thiểu 6 ký tự, có ít nhất 1 chữ và 1 số. (VD: 12345a)</span>
+                      </div>
+                      <div class="col-6 col-sm-9">
+                          <input type="password" id="txtMK" class="form-control" >
+                          <span id="tbMK"></span>
+                      </div>
+                  </div><br>
+                    <!-- ngay sinh-->
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <label for="">Ngày sinh: </label>
+                        </div>
+                        <div class="col-6 col-sm-9">
+                            <input type="date" id="txtNgSinh" class="form-control" >
+                            <span id="tbNgSinh"></span>
+                        </div>
+                    </div><br>
+                    
+                    <!-- dia chi -->
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <label for="">Địa chỉ: <span style="color: red;font-weight: bold;">*</span></label>
+                        </div>
+                        <div class="col-6 col-sm-9">
+                            <input type="text" class="form-control"  id="txtDC">
+                            <span id="tbDC"></span>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                      <div class="col-6 col-sm-3">
+                          <label for="">Số điện thoại giới thiệu(nếu có):</label>
+                      </div>
+                      <div class="col-6 col-sm-9">
+                          <input type="text" class="form-control"  id="txtDC">
+                          <span id="tbDC"></span>
+                      </div>
+                  </div><br>
+                    
+                    <!-- nut lưu -->
+                    <div class="row" style="justify-content: center;">
+                        <div class="col-sm-12"><input type="button" value="Lưu" id="btnSave" class="btn btn-success btn-block"></div>
+                        <p>Bạn đã có tài khoản? <a href="../html/dangnhap.html">Đăng nhập</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- </div> -->
+    <footer style="background-color: #fff;border: 0.1px solid rgb(231, 229, 229);margin-top: 20px;">
+      <div class="row"
+        style="background-color: #fff; font-size: 14px; width: 80%; margin-left: 100px; line-height: 30px;">
+        <div class="col-3" style="margin-top: 20px;">
+          <a href="">Giới thiệu về công ty</a> <br>
+          <a href="">Chính sách bảo mật</a><br>
+          <a href="">Quy tắc hoạt động</a><br>
+          <a href="">Kiểm tra hóa đơn điện tử</a><br>
+          <a href="">Tra cứu thông tin bảo hành</a><br>
+        </div>
+        <div class="col-3" style="margin-top: 20px;">
+          <a href="">Tin tuyển dụng</a><br>
+          <a href="">Tin khuyến mãi</a><br>
+          <a href="">Hướng dẫn mua online</a><br>
+          <a href="">Hướng dẫn mua trả góp</a><br>
+          <a href="">Chính sách trả góp</a><br>
+        </div>
+        <div class="col-3" style="margin-top: 20px;">
+          <a href="">Hệ thống cửa hàng</a><br>
+          <a href="">Chính sách đổi trả</a><br>
+          <a href="">Hệ thống bảo hành</a><br>
+          <a href="">Giới thiệu máy đổi trả</a><br>
+          <a href="">Chính sách mạng di động FPT</a><br>
+        </div>
+        <div class="col-3" style="margin-top: 20px;font-size: 15px;line-height: 20px;">
+          <div class="connection" style="display: flex;">
+            <p style="margin-right: 10px;font-weight: bold;">Kết nối với chúng tôi:</p>
+            <a href="https://www.facebook.com/kha.thanh.7315720/"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <p>Tư vấn miễn phí: <span class="text-danger" style="font-weight: bold;">0345280659</span></p>
+          <p>Góp ý khiếu nại: <span class="text-danger" style="font-weight: bold;">0345280659</span></p>
+          <h6>HỖ TRỢ THANH TOÁN</h6>
+          <img src="../img/PAY.jpg" alt="">
+        </div>
+      </div>
+      <hr style="width:80%;text-align:center;margin-left:140px,">
+      <div class="text-center" style="line-height: 5px;color: gray;font-size: 13px;">
+        <p>Website bán đồng hồ. Họ tên: Huỳnh Văn Hiếu. MSSV:22678151. DHKTPM18CTT</p><br>
+        <p>Điện thoại: <span><a href="https://chat.zalo.me/">0345280659</a></span> . Gmail:
+          <span>huynhvanhieu16042004@gmail.com</span>.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

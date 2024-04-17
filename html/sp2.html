@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng đeo tay thông minh Xiaomi Mi Band 8</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper" style="background-color: rgb(255, 255, 255);">
+        <header style="background-color: #282120">
+            <div class="nav-head" style="justify-content: center;height: 150px">
+              <div class="img">
+                <a href="../html/home.html"><img src="../img/logo.png" alt="" style="height: 150px;margin-left: 100px;"></a>
+      
+              </div>
+              <div class="item" style="margin-left: 100px;margin-top: 60px;">
+                <div class="search">
+                  <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Bạn cần tìm..." aria-label="Search"
+                          style="width: 350px;height: 45px;">
+                          <button class="btn btn-success" type="submit" style="background-color: #9e7d57;">Tìm</button>
+                        </form>
+                    </div>
+                  </nav>
+                </div>
+                <div class="contact">
+                  <button type="button" class="btn btn-secondary" style="border-radius:20px;font-size:90%;margin-right: 20px;background-color: #9e7d57;"><a href="#" style="color: #fff;">Liên hệ<br>0345280659</a></button>
+                </div>
+                <div class="dangnhap">
+                  <button type="button" class="btn btn-secondary" style="border-radius:20px;font-size: 90%;margin-right: 20px; background-color: #9e7d57;"><a href="../html/dangnhap.html" style="color: #fff;">Đăng ký<br>Đăng nhập</a></button>
+                </div>
+                <div class="cart">
+                  <button type="button" class="btn btn-secondary" style="border-radius:20px;height: 57px;font-size: 90%;margin-right: 20px;background-color: #9e7d57;"><a href="../html/cart.html" style="color: #fff;">Giỏ hàng</a></button>
+                </div>
+                <div class="cart">
+                  <button type="button" class="btn btn-secondary" style="border-radius:20px;height: 57px;font-size: 90%;margin-right: 20px;background-color: #9e7d57;"><a href="../html/dangnhap.html" style="color: #fff;">Tra cứu<br>đon hàng</a></button>
+                  </div>
+              </div>
+            </div>
+          </header>
+        <div class="topnav" style="position: relative;margin-top: -5px;background-color: #9e7d57;">
+            <div class="menu" style="margin-top: 10px;font-size: 15px;">
+                <ul class="nav" style="margin-left: 40px; margin-top: -20px; justify-content: center;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../html/home.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/kindofwatch.html" class="text-white" data-bs-toggle="dropdown"
+                            aria-expanded="false">LOẠI ĐỒNG HỒ</a>
+                        <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+                            <li><a class="dropdown-item" href="../html/kindofwatch.html" style="font-weight: bold;">LOẠI
+                                    ĐỒNG HỒ</a></li>
+                            <li><a class="dropdown-item" href="#">Đồng hồ thông minh</a></li>
+                            <li><a class="dropdown-item" href="#">Vòng đeo tay thông minh</a></li>
+                            <li><a class="dropdown-item" href="#">Đồng hồ định vị trẻ em</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Theo nhu cầu</a></li>
+                            <li><a class="dropdown-item" href="#">Theo thương hiệu</a></li>
+                            <li><a class="dropdown-item" href="#">Theo tiêu chí</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/brand.html" class="text-white" data-bs-toggle="dropdown"
+                            aria-expanded="false">THƯƠNG HIỆU</a>
+                        <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+                            <li><a class="dropdown-item" href="../html/brand.html" style="font-weight: bold;">THƯƠNG
+                                    HIỆU</a></li>
+                            <div class="row">
+                                <div class="col-12">
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/amazfit.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/Apple_watch.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img
+                                                src="../img/brand/brand-icon-soundpeats_2.webp" alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/coros.webp" alt=""></a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/garmin.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/Huawei.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/Kieslect.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/Samsung.webp"
+                                                alt=""></a></li>
+                                    <li><a class="dropdown-item" href="#"><img src="../img/brand/Xiaomi.webp"
+                                                alt=""></a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/accessories.html" class="text-white" data-bs-toggle="dropdown"
+                            aria-expanded="false">PHỤ KIỆN</a>
+                        <ul class="dropdown-menu" style="background-color: rgb(228, 228, 228);">
+                            <li><a class="dropdown-item" href="../html/accessories.html" style="font-weight: bold;">Dây
+                                    đồng hồ</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/shop.html">CỬA HÀNG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/aboutUs.html">VỀ CHÚNG TÔI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h4 style="margin-top: 20px;">Vòng đeo tay thông minh Xiaomi Mi Band 8</h4>
+                <hr style="width:80%;text-align:center;margin-left:140px,">
+                <div class="col-8">
+                    <div class="card" style=" width: 18rem; width: 700px;">
+                        <div class="card-body" style="height: 400px;">
+                            <!-- <p class="card-text"> -->
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/product/sp2/a1.webp" class="d-block w-100" alt="..."
+                                            style="padding-left: 130px;padding-right: 130px;width: 100%;height: 100%;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/product/sp2/a2.png" class="d-block w-100" alt="..."
+                                            style="padding-left: 130px;padding-right: 130px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/product/sp2/a3.webp" class="d-block w-100" alt="..."
+                                            style="padding-left: 130px;padding-right: 130px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/product/sp2/a4.jpg" class="d-block w-100" alt="..."
+                                            style="padding-left: 130px;padding-right: 130px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/product/sp2/a5.jpg" class="d-block w-100" alt="..."
+                                            style="padding-left: 130px;padding-right: 130px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/product/sp2/a6.webp" class="d-block w-100" alt="..."
+                                            style="padding-bottom: 40px;">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev" style="border: none;width: 100px;">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next" style="border: none;width: 100px;">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style=" width: 18rem; width: 700px;">
+                        <div class="mini-img" style="margin-left: 10%;">
+                            <img src="../img/product/sp2/a1.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a22.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a3.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a4.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a5.jpg" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a6.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a7.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                            <img src="../img/product/sp2/a8.webp" alt=""
+                                style="width: 50px;height: 50px; margin-left: 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4" style="margin-left: -20px;"> <br>
+                    <h5>Chọn mẫu</h5>
+                    <div class="size" style="display: flex;">
+                        <a href=""><button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true"
+                                style="border: 1px solid gray;color: black;font-size: 13px;width:130px;border-radius: 15px;">
+                                <span style="font-weight: bold;">Mi Band 8</span><br>790.000đ</button></a>
+                        <a href=""><button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true"
+                                style="border: 1px solid gray;color: black;font-size: 13px;width:130px;border-radius: 15px; margin-left: 10%;">
+                                <span style="font-weight: bold;">Mi Band 8 Active</span><br>550.000đ</button></a>
+                    </div>
+                    <br>
+                    <h5>Chọn màu</h5>
+                    <div class="color" style="display: flex;">
+                        <a href=""><button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true"
+                                style="border: 1px solid gray;color: black;font-size: 13px;width:130px;border-radius: 15px;">
+                                <span style="font-weight: bold;">Vàng</span><br>790.000đ</button></a>
+                        <a href=""><button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true"
+                                style="border: 1px solid gray;color: black;font-size: 13px;width:130px;border-radius: 15px; margin-left: 10%;">
+                                <span style="font-weight: bold;">Đen</span><br>790.000đ</button></a>
+
+                    </div>
+                    <div id="card-price" class="card"
+                        style="display: flex; width:450px;border-radius: 15px;margin-top: 20px;background-color: rgb(216, 216, 216);">
+                        <div class="size" style="display: flex;">
+                            <a href=""><button type="button" class="btn active" data-bs-toggle="button"
+                                    aria-pressed="true"
+                                    style="border: 1px solid rgb(255, 255, 255);color: black;font-size: 15px;width:200px;border-radius: 15px;">
+                                    <h5 class="text-danger" style="font-weight: bold;margin-bottom: -20px;">590.000đ
+                                    </h5><br>Khi thu cũ lên đời
+                                </button></a>
+                            <a href=""><button type="button" class="btn active" data-bs-toggle="button"
+                                    aria-pressed="true"
+                                    style="border: 1px solid rgb(255, 255, 255);color: black;font-size: 15px;width:200px;border-radius: 15px; margin-left: 10%;">
+                                    <h5 class="text-danger" style="font-weight: bold;margin-bottom: -20px;">790.000đ
+                                    </h5><br> <del> 1.290.000đ</del>
+                                </button></a>
+                        </div>
+                    </div>
+                    <div class="size" style="display: flex; margin-top: 10px;">
+                        <button type="button" class="btn btn-secondary" style="border-radius:20px;font-size: 80%;margin-right: 20px; background-color: rgba(240, 15, 15, 0.959);"><a href="../html/dangnhap.html" style="color: #fff;"><h5 style="font-weight: bold;margin-bottom: -10px;">MUA NGAY</h5><br>(Giao nhanh trong 2 giờ hoặc nhận tại cửa hàng)</a></button>
+
+                        <a href=""><button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true"
+                                style="border: 3px solid rgb(255, 0, 0);color: black;font-size: 14px;width:120px;border-radius: 15px; margin-left: 10%;font-size: 15px;height: 70px;">Thêm
+                                vào <br> giỏ hàng</button></a>
+                    </div>
+                    <div class="size" style="display: flex; margin-top: 10px;">
+                        <a href=""><button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                aria-pressed="true"
+                                style="border: 1px solid rgb(255, 255, 255);color: rgb(255, 255, 255);font-size: 14px;width:215px;border-radius: 15px; margin-right: 20px;">
+                                <h6 style="font-weight: bold;margin-bottom: -20px;">TRẢ GÓP 0%</h6><br> <del>Trả trước
+                                    chỉ từ 1.178.000đ</del>
+                            </button></a>
+                        <a href=""><button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                aria-pressed="true"
+                                style="border: 1px solid rgb(255, 255, 255);color: rgb(255, 251, 251);font-size: 14px;width:215px;border-radius: 15px;">
+                                <h6 style="font-weight: bold;margin-bottom: -20px;">TRẢ GÓP 0% QUA THẺ</h6><br>(Không
+                                phí chuyển đổi 3-6 tháng)
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="display: flex;">
+                <div class="col-8">
+                    <div class="card" style="width: 18rem; width: 750px;">
+                        <div class="card-body" style="font-size: 16.5px;">
+                            <div class="dd"
+                                style="background-color: rgb(240, 238, 238);border-radius: 10px;padding-bottom: 10px;font-size: 17px;">
+                                <h5
+                                    style="padding-top: 10px;font-weight: bold;color: rgb(221, 14, 14);text-align: center;">
+                                    ĐẶC ĐIỂM NỔI BẬT</h4>
+                                    <ul>
+                                        <li>Trang bị màn hình Rentina, khung viền nhôm cùng kính cường lực chắc chắn
+                                        </li>
+                                        <li>Hõ trợ thao tác mượt mà với chip S8 SiP mạnh mẽ</li>
+                                        <li>Dễ dàng theo dõi sức khoẻ với cảm biến nhịp tim, tính năng theo dõi giấc
+                                            ngủ, chu kỳ kinh nguyệt,...</li>
+                                        <li>Hỗ trợ nghe gọi, nhắn tin ngay trên cổ tay mà không cần bật điện thoại</li>
+                                        <li>Kích thước 40mm nhỏ nhắn cùng dây đeo cao su êm ái, ôm tay cho cảm giác
+                                            thoải mái</li>
+                                    </ul>
+                            </div>
+                            <br>
+                            <p> <span style="font-weight: bold;">Xiaomi Mi Band 8</span> với trang bị màn hình Retina
+                                cho hiển thị vô cùng sắc nét cùng kính cường lực vô cùng chắc chắn, sang trọng và cực kỳ
+                                đẹp mắt. Kích thước đồng hồ là 44mm nhỏ gọn cùng dây đeo cao su êm ái. Sản phẩm <span
+                                    style="font-weight: bold;color: red;">Xiaomi Mi Band 8</span> được tích hợp chip S8
+                                SiP mạnh mẽ, thời gian sử dụng lên đến 18 giờ.</p>
+                            <h4>Xiaomi Mi Band 8 - Thiết kế sang trọng</h4>
+                            <p>
+                                Vòng đeo tay thông minh Xiaomi Mi Band 8 (GPS) không chỉ là một sản phẩm đồng hồ xem
+                                giờ, nó còn tích hợp rất nhiều tính năng theo dõi sức khỏe, luyện tập thông minh. Với
+                                thiết kế vô cùng sang trọng như màn hình Retina, khung viền nhôm cùng kính cường lực
+                                chắc chắn.</p>
+
+                            <h5>Thiết kế sang trọng</h5>
+                            Vòng đeo tay thông minh Xiaomi Mi Band 8 (GPS) có kích thước nhỏ gọn, phù hợp cho cả nam và
+                            nữ, không gây cảm giác nặng nề trên cổ tay. Đặc biệt, dây đeo êm ái giúp ôm sát tay một cách
+                            thoải mái, cho phép bạn đeo sản phẩm suốt cả ngày mà không cảm thấy khó chịu.
+                            <img src="../img/product/sp2/ap1.webp" alt="" style="width:100%">
+                            <p>Màn hình Retina sắc nét của Vòng đeo tay thông minh Xiaomi Mi Band 8cung cấp trải nghiệm
+                                hình ảnh tuyệt vời. Sự kết hợp giữa khung viền nhôm chắc chắn và mặt kính cường lực
+                                không chỉ tạo nên một vẻ đẹp mạnh mẽ mà còn bảo vệ sản phẩm khỏi trầy xước và va đập
+                                trong cuộc sống hàng ngày.</p>
+                            <h4>Dễ dàng theo dõi sức khỏe và luyện tập</h4>
+                            <p>Sản phẩm này được trang bị cảm biến nhịp tim tiên tiến, cho phép bạn theo dõi nhịp tim
+                                của mình suốt cả ngày. Điều này không chỉ giúp bạn biết được nhịp tim trong tình trạng
+                                nghỉ mà còn khi bạn đang hoạt động, từ đó đánh giá được cường độ của luyện tập.</p>
+                            <img src="../img/product/sp2/ap2.webp" alt="" style="width:100%">
+                            <p>Vòng đeo tay thông minh Xiaomi Mi Band 8có tính năng theo dõi giấc ngủ thông minh, cho
+                                phép bạn biết được thời gian bạn đã ngủ và chất lượng giấc ngủ. Điều này giúp bạn hiểu
+                                rõ hơn về thói quen ngủ của mình và tìm cách cải thiện chất lượng giấc ngủ.</p>
+                            <h4>Trang bị định vị GPS</h4>
+                            <p>Với chip S8 SiP mạnh mẽ, Vòng đeo tay thông minh Xiaomi Mi Band 8 (GPS) hoạt động mượt mà
+                                và nhanh chóng. Đồng hồ còn được trang bị GPS tích hợp, cho phép bạn theo dõi vị trí và
+                                quãng đường di chuyển một cách chính xác.</p>
+                            <img src="../img/product/sp2/ap3.webp" alt="" style="width:100%">
+                            <p>Sạc không dây đã trở thành một tiện ích quen thuộc và Vòng đeo tay thông minh Xiaomi Mi
+                                Band 8 (GPS) không ngoại lệ. Tính năng này cho phép bạn sạc pin của sản phẩm một cách
+                                tiện lợi, không cần dây cáp rườm rà.</p>
+                            <h4>Thời gian sạc nhanh hơn</h4>
+                            <p>Vòng đeo tay thông minh Xiaomi Mi Band 8 (GPS) hỗ trợ chế độ tiết kiệm pin với thời lượng
+                                sử dụng kéo dài lên đến 18 tiếng. Chế độ này tắt một số tính năng không cần thiết để
+                                giảm tiêu thụ pin, giúp bạn duy trì sử dụng sản phẩm trong thời gian dài hơn.</p>
+                            <img src="../img/product/sp2/ap4.webp" alt="" style="width:100%">
+                            <p>Một điểm mạnh nổi bật của Vòng đeo tay thông minh Xiaomi Mi Band 8 (GPS) là thời gian sạc
+                                nhanh. Chỉ cần khoảng 2 giờ để sản phẩm sạc đầy pin từ trạng thái hết pin.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;width: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Thông số kĩ thuật</h5>
+                            <!-- <div class="news">
+                <div class="new1" style="display: flex;margin-bottom: 10px;">
+                  <img src="../img/baibao1.webp" alt="Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây" style="height: 65px;width: 100px;border-radius: 15px;">
+                  <a style="margin-left: 10px;" href="https://cellphones.com.vn/sforum/dong-ho-tan-the-du-doan-thoi-diem-diet-vong">Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây</a>
+                </div>
+                <div class="new1" style="display: flex;margin-bottom: 10px;">
+                  <img src="../img/baibao2.webp" alt="Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây" style="height: 65px;width: 100px;border-radius: 15px;">
+                  <a style="margin-left: 10px;" href="https://cellphones.com.vn/sforum/cach-su-dung-dong-ho-kieslect-kr-pro">Bật mí cách sử dụng đồng hồ Kieslect KR Pro cực chi tiết</a>
+                </div>
+                <div class="new1" style="display: flex;margin-bottom: 10px;">
+                  <img src="../img/baibao3.jpg" alt="Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây" style="height: 65px;width: 100px;border-radius: 15px;">
+                  <a style="margin-left: 10px;" href="https://cellphones.com.vn/sforum/dong-ho-black-friday">Loạt đồng hồ sale Black Friday giảm hơn 50%, dân chạy bộ đừng quên "chạy" săn deal</a>
+                </div>
+                <div class="new1" style="display: flex;margin-bottom: 10px;">
+                  <img src="../img/baibao4.jpg" alt="Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây" style="height: 65px;width: 100px;border-radius: 15px;">
+                  <a style="margin-left: 10px;" href="https://cellphones.com.vn/sforum/chiec-dong-ho-co-gia-hang-ty-dong-dat-ngang-sieu-xe-chi-vi-so-huu-chi-tiet-sieu-nho-nay">Chiếc đồng hồ có giá hàng tỷ đồng, đắt ngang siêu xe chỉ vì sở hữu chi tiết siêu nhỏ này</a>
+                </div>
+                <div class="new1" style="display: flex;margin-bottom: 10px;">
+                  <img src="../img/baibao5.jpg" alt="Đồng hồ tận thế dự đoán loài người chỉ còn tồn tại được 90 giây" style="height: 65px;width: 100px;border-radius: 15px;">
+                  <a style="margin-left: 10px;" href="https://cellphones.com.vn/sforum/top-5-dong-ho-the-thao-dang-mua-nhat-cho-nguoi-moi-su-dung">Top 5 đồng hồ thể thao đáng mua nhất 2023 cho người mới sử dụng</a>
+                </div>
+              </div> -->
+                            <table style="width:100%; line-height: 30px;margin-bottom: 20px;">
+                                <tr>
+                                    <th>Công nghệ màn hình</th>
+                                    <td>Đồng hồ</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Kích thước màn hình</span> </td>
+                                    <td>Hãng không công bố</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Đường kính mặt</span> </td>
+                                    <td>40 mm</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Bộ nhớ trong</span> </td>
+                                    <td>32 GB</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Kích thước cổ tay phù hợp</span> </td>
+                                    <td>130-160mm</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Tương thích</span> </td>
+                                    <td>iOS</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Nghe,gọi</span> </td>
+                                    <td>Nghe gọi qua Bluetooth</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Tiện ích sức khoẻ</span> </td>
+                                    <td>Chế độ luyện tập, Theo dõi giấc ngủ, Đo nhịp tim, Đếm bước chân, Tính calo tiêu
+                                        thụ, Tính quãng đường chạy, Đo mức độ stress, Phát hiện té ngã, Cảnh báo nhịp
+                                        tim bất thường, Theo dõi chu kỳ</td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Thời lượng pin</span> </td>
+                                    <td>Chế độ tiết kiệm pin: 18 giờ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: bold;">Hãng sản xuất</span> </td>
+                                    <td>Apple Chính hãng</td>
+                                </tr>
+                            </table>
+                            <button type="button" class="btn btn-outline-info" style="margin-left: 50px;"><a
+                                    href="https://cellphones.com.vn/sforum/tag/dong-ho">Xem tất cả các bài
+                                    viết</a></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #fff;border: 0.1px solid rgb(231, 229, 229);margin-top: 20px;">
+        <div class="row"
+            style="background-color: #fff; font-size: 14px; width: 80%; margin-left: 100px; line-height: 30px;">
+            <div class="col-3" style="margin-top: 20px;">
+                <a href="">Giới thiệu về công ty</a> <br>
+                <a href="">Chính sách bảo mật</a><br>
+                <a href="">Quy tắc hoạt động</a><br>
+                <a href="">Kiểm tra hóa đơn điện tử</a><br>
+                <a href="">Tra cứu thông tin bảo hành</a><br>
+            </div>
+            <div class="col-3" style="margin-top: 20px;">
+                <a href="">Tin tuyển dụng</a><br>
+                <a href="">Tin khuyến mãi</a><br>
+                <a href="">Hướng dẫn mua online</a><br>
+                <a href="">Hướng dẫn mua trả góp</a><br>
+                <a href="">Chính sách trả góp</a><br>
+            </div>
+            <div class="col-3" style="margin-top: 20px;">
+                <a href="">Hệ thống cửa hàng</a><br>
+                <a href="">Chính sách đổi trả</a><br>
+                <a href="">Hệ thống bảo hành</a><br>
+                <a href="">Giới thiệu máy đổi trả</a><br>
+                <a href="">Chính sách mạng di động FPT</a><br>
+            </div>
+            <div class="col-3" style="margin-top: 20px;font-size: 15px;line-height: 20px;">
+                <div class="connection" style="display: flex;">
+                    <p style="margin-right: 10px;font-weight: bold;">Kết nối với chúng tôi:</p>
+                    <a href="https://www.facebook.com/kha.thanh.7315720/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <p>Tư vấn miễn phí: <span class="text-danger" style="font-weight: bold;">0345280659</span></p>
+                <p>Góp ý khiếu nại: <span class="text-danger" style="font-weight: bold;">0345280659</span></p>
+                <h6>HỖ TRỢ THANH TOÁN</h6>
+                <img src="../img/PAY.jpg" alt="">
+            </div>
+        </div>
+        <hr style="width:80%;text-align:center;margin-left:140px,">
+        <div class="text-center" style="line-height: 5px;color: gray;font-size: 13px;">
+            <p>Website bán đồng hồ. Họ tên: Huỳnh Văn Hiếu. MSSV:22678151. DHKTPM18CTT</p><br>
+            <p>Điện thoại: <span><a href="https://chat.zalo.me/">0345280659</a></span> . Gmail:
+                <span>huynhvanhieu16042004@gmail.com</span>.
+            </p>
+        </div>
+    </footer>
+    <!-- </div> -->
+</body>
+
+</html>

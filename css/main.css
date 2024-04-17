@@ -1,0 +1,115 @@
+.wrapper {
+
+  padding: 0px;
+  margin: auto;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+
+}
+
+/* *, html{
+  overflow: hidden;
+
+} */
+.icon-menu {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.ic-menu {
+  width: 35px;
+  height: 5px;
+  background-color: #e9d8d8;
+  margin: 6px 0;
+}
+
+.topnav {
+  margin-top: 5px;
+  position: relative;
+  padding-top: 12px;
+}
+
+.nav-item {
+  margin-right: 70px;
+}
+
+.nav-item :hover {
+  color: rgb(41, 40, 40);
+}
+
+a.nav-link {
+  color: #f7f7f7;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.card {
+  margin-top: 10px;
+  padding: 10px 10px;
+}
+
+.nav-head {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  margin: 20px 20px;
+  ;
+  margin-top: 100px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.card-img-top:hover {
+  transition: all 0.3s linear;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+}
+
+.row .dropdown-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.row .dropdown-item {
+  width: 200px;
+}
+
+.card-body .text-danger {
+  font-size: 18px;
+}
+
+.brand-img img {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.chu_mauDo{
+  color: red;
+}
+.chu_mauXanh{
+  color: rgb(9, 185, 9);
+}
